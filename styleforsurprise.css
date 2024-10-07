@@ -1,0 +1,106 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the full width and height of the page are used */
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-image: url('./assets/images/panda.png'); /* Use the panda image as the background */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling on the entire page */
+}
+
+/* Message Container Styling */
+.message-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque for readability */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw; /* Adjust to fit comfortably within the screen */
+    max-height: 70vh; /* Prevent container from exceeding viewport height */
+    overflow: scroll;
+}
+
+/* Message Header Styling */
+.message-area h2 {
+    font-size: 28px;
+    color: #ff7f7f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Text Area Styling (with scrollbar) */
+.message-area textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    height: 50vh; /* Fix the height of the text area */
+    background-color: #f9f9f9;
+    overflow-y: scroll; /* Enable vertical scrollbar */
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Keep formatting for multiline text */
+}
+
+/* Customize scrollbar for textarea */
+.message-area textarea::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.message-area textarea::-webkit-scrollbar-thumb {
+    background-color: #ff7f7f; /* Scrollbar color */
+    border-radius: 5px;
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .message-container {
+        padding: 30px;
+        width: 85vw;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .message-area h2 {
+        font-size: 24px;
+    }
+
+    .message-area textarea {
+        font-size: 16px;
+        height: 40vh; /* Reduced height for smaller screens */
+    }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+    .message-container {
+        padding: 20px;
+        width: 90vw;
+        height: auto; /* Fit content automatically in mobile */
+    }
+
+    .message-area h2 {
+        font-size: 20px;
+    }
+
+    .message-area textarea {
+        font-size: 14px;
+        height: 30vh; /* Reduce height for mobile screens */
+    }
+}

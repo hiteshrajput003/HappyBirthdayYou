@@ -1,0 +1,33 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <div class="content-container">
+        <div class="text-content">
+            <h1 class="birthday-heading">Happy Birthday Shehzaadi!</h1>
+            <p>Celebrating Renuka: The Queen of Awesomeness Today!</p>
+            <button class="surprise-btn" onclick="openPDF()">Open me!😄</button>
+        </div>
+        <div class="polaroid">
+            <img src="./assets/images/renuka.jpg" alt="Polaroid Photo">
+        </div>
+    </div>
+
+    <script>
+        function openPDF() {
+            window.open("./assets/pdf/"); // Replace with your actual PDF path
+        }
+    </script>
+</body>
+</html>

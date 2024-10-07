@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background Image with Reduced Brightness */
+body {
+    background-image: url('./assets/images/panda.jpg');
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:auto;
+    position: relative; /* To allow overlay */
+    
+    
+  
+
+}
+
+/* Add an overlay to make the text stand out more */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+}
+
+/* Content Container */
+.content-container {
+    background-color: rgba(227, 186, 139, 0.95); /* Brighter box */
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    position: relative; /* To stay on top of the overlay */
+    z-index: 2;
+}
+
+.text-content {
+    text-align: left;
+}
+
+.text-content h1.birthday-heading {
+   font-size: 65px;
+   font-weight:750;
+    color: #1f0a0a;
+    margin-bottom: 43px;
+    text-shadow: 4px 4px 40px rgba(0, 0, 0, 0.6);
+}
+
+.text-content p {
+    font-size: 27px;
+    color: #666;
+}
+
+.surprise-btn {
+    background-color: #e96b6b;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Bigger button */
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.surprise-btn:hover {
+    background-color: #ff4f4f;
+}
+
+/* Polaroid Section */
+.polaroid {
+    margin-left: 40px;
+    padding: 15px;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    transition: transform 0.4s ease;
+}
+
+.polaroid:hover {
+    transform: scale(1.05);
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .polaroid {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .text-content h1.birthday-heading {
+        font-size: 36px; /* Adjusted for smaller screens */
+    }
+}
+
+
+
+
